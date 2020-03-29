@@ -1,0 +1,6 @@
+C:\Users\IsmashiSan\source\repos\EJERCICIO2\EJEMPLO2\bin\Debug\EJEMPLO2.exe.config
+C:\Users\IsmashiSan\source\repos\EJERCICIO2\EJEMPLO2\bin\Debug\EJEMPLO2.exe
+C:\Users\IsmashiSan\source\repos\EJERCICIO2\EJEMPLO2\bin\Debug\EJEMPLO2.pdb
+C:\Users\IsmashiSan\source\repos\EJERCICIO2\EJEMPLO2\obj\Debug\Ejemplo clase 2.csprojAssemblyReference.cache
+C:\Users\IsmashiSan\source\repos\EJERCICIO2\EJEMPLO2\obj\Debug\EJEMPLO2.exe
+C:\Users\IsmashiSan\source\repos\EJERCICIO2\EJEMPLO2\obj\Debug\EJEMPLO2.pdb
