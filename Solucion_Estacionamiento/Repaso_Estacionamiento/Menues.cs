@@ -24,7 +24,6 @@ namespace Repaso_Estacionamiento
                 separador += caracter;
             }
             return separador;
-
         }
     }
 }
