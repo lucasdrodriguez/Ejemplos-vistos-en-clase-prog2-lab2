@@ -14,10 +14,12 @@ namespace Entidades
         {
             while (s == string.Empty)
             {
+
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine(mensajeError);
+                Console.ResetColor();
                 s = Console.ReadLine();
             }
-
             return s;
         }
         public static int ValidarCargaEntero(string s, string mensajeError, int max, int min)
@@ -25,37 +27,45 @@ namespace Entidades
             int numeroARetornar = 0;
             while (!(int.TryParse(s, out numeroARetornar)) || numeroARetornar < min || numeroARetornar > max)
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine(mensajeError);
+                Console.ResetColor();
                 s = Console.ReadLine();
             }
 
             return numeroARetornar;
         }
-        public static double ValidarCargaDouble(string s, string mensajeError)
+        public static double ValidarCargaDouble(string s, string mensajeError, double max, double min)
         {
             double numeroARetornar = 0;
-            while (!(double.TryParse(s, out numeroARetornar)) || numeroARetornar < 1)
+            while (!(double.TryParse(s, out numeroARetornar)) || numeroARetornar < min || numeroARetornar > max)
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine(mensajeError);
+                Console.ResetColor();
                 s = Console.ReadLine();
             }
-
             return numeroARetornar;
         }
 
         public static bool ValidarSioNo(string v)
         {
             string respuesta = String.Empty;
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine(v + " SI en caso afirmativo, NO en caso negativo");
+            Console.ResetColor();
             respuesta = Console.ReadLine().ToUpper();
 
             while (respuesta != "SI" && respuesta != "NO")
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Error, dato ingresado no valido");
                 Console.WriteLine(v + " SI en caso afirmativo, NO en caso negativo");
-                respuesta = Console.ReadLine().ToUpper();
+                Console.ResetColor();
 
+                respuesta = Console.ReadLine().ToUpper();
             }
+
             if (respuesta == "SI")
                 return true;
             return false;

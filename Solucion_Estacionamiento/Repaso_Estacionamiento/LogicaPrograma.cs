@@ -41,10 +41,10 @@ namespace Repaso_Estacionamiento
             nombre = Validaciones.ValidarCargaString(Console.ReadLine(), "Error,reingrese un nombre valido para su estacionamiento");
 
             Console.WriteLine("\ningresar capacidad del estacionamiento");
-            capacidad = Validaciones.ValidarCargaEntero(Console.ReadLine(), "Error,capacidad no valida.Maximo 100 ", 100, 1);
+            capacidad = Validaciones.ValidarCargaEntero(Console.ReadLine(), "Error,capacidad no valida.Maximo 100 ", int.MaxValue, 1);
 
-            Console.WriteLine("\ningresar precio del estacionamiento");
-            precio = Validaciones.ValidarCargaDouble(Console.ReadLine(), "Error,numero no valido");
+            Console.WriteLine("\ningresar precio en pesos por dia del estacionamiento");
+            precio = Validaciones.ValidarCargaDouble(Console.ReadLine(), "Error,numero no valido.Debe ser mayor a 1 peso",double.MaxValue,1);
 
             return new Estacionamiento(nombre, capacidad, precio);
 
@@ -52,10 +52,8 @@ namespace Repaso_Estacionamiento
 
         public static void MostrarMenu()
         {
-           Console.ForegroundColor = ConsoleColor.DarkGreen;
-           Console.WriteLine("******************************************************************************");
-           Console.WriteLine($"BIENVENIDOS AL ESTACIONAMIENTO : {instanciaEstacionamiento.RetornarNombre().ToUpper()}");
-           Console.WriteLine("******************************************************************************");
+
+           Menues.MostrarCabecera($"BIENVENIDOS AL ESTACIONAMIENTO: { instanciaEstacionamiento.RetornarNombre().ToUpper()}", '*');
            Console.ResetColor();
            Console.WriteLine($"\nSeleccione una opcion para continuar\n");
            Console.WriteLine(" 1. Ver informacion total del estacionamiento");
@@ -81,8 +79,11 @@ namespace Repaso_Estacionamiento
                     case "1":
                         Console.Clear();
                         Menues.MostrarCabecera("1. informacion total del estacionamiento ", '*');
+                        Console.ForegroundColor = ConsoleColor.Cyan;
                         Console.WriteLine(instanciaEstacionamiento.MostrarEstacionamiento());
-                        LogicaPrograma.Continuar("Presione una tecla para continuar");
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        LogicaPrograma.Continuar("\n\nPresione una tecla para continuar");
+                        Console.ResetColor();
                         opcionIncorrecta = false;
                         break;
                     case "2":
@@ -109,6 +110,7 @@ namespace Repaso_Estacionamiento
 
         private static bool Salir(string mensaje)
         {
+
             if (Validaciones.ValidarSioNo(mensaje))
             {
                 return true;
@@ -149,12 +151,13 @@ namespace Repaso_Estacionamiento
             {
                 if (instanciaEstacionamiento + LogicaPrograma.CrearAuto())
                 {
+                    Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("\nAuto agregado perfectamente!\n");
                 }
                 else
                 {
-                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
                     Console.WriteLine("\nEl auto no ha podido ser agregado porque ya existe\n");
                 }
             }

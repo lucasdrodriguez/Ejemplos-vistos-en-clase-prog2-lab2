@@ -46,17 +46,23 @@ namespace Entidades
             sb.AppendLine($"\nNombre estacionamineto: {this.nombreEstacionamiento}");
             sb.AppendLine($"Capacidad estacionamineto: {this.tieneCapacidadLibre()} lugares libres de {this.arrayDeAuto.Length}");
             sb.AppendLine($"Precio por auto: {this.precioXAuto}");
-            sb.AppendLine($"\nInformacion de los autos:");
-            foreach (Auto item in this.arrayDeAuto)
+            sb.Append($"\nInformacion de los autos:");
+            if (!(this.tieneCapacidadLibre()==this.arrayDeAuto.Length))
             {
-                if(!(item is null))
+                foreach (Auto item in this.arrayDeAuto)
                 {
-                    sb.AppendLine($"**************************");
-                    sb.AppendLine($" {item.GetInformacion()}");
-                    sb.AppendLine($"**************************\n");
+                    if (!(item is null))
+                    {
+                        sb.AppendLine($"\n**************************");
+                        sb.AppendLine($" {item.GetInformacion()}");
+                        sb.AppendLine($"**************************");
+                    }
                 }
             }
-           
+             else
+            {
+                sb.Append(" No hay ningun auto ingresado hasta el momento");
+            }
 
             return sb.ToString();
         }
