@@ -52,7 +52,7 @@ namespace Repaso_Estacionamiento
 
         public static void MostrarMenu()
         {
-           Console.ForegroundColor = ConsoleColor.;
+           Console.ForegroundColor = ConsoleColor.DarkGreen;
            Console.WriteLine("******************************************************************************");
            Console.WriteLine($"BIENVENIDOS AL ESTACIONAMIENTO : {instanciaEstacionamiento.RetornarNombre().ToUpper()}");
            Console.WriteLine("******************************************************************************");
