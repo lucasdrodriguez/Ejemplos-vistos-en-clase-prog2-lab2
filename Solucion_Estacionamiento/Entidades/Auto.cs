@@ -1,0 +1,88 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entidades
+{
+    public class Auto
+    {
+        private string patente;
+        private string marca;
+        private int cantidadPuertas;
+        private int dniDueño;
+
+        #region Constructores
+        //con el this le damos prioridad
+        public Auto(string pPatente, string pMarca, int pCantidadPuertas, int pDniDueño) : this(pPatente, pDniDueño)
+        {
+            this.marca = pMarca;
+            this.cantidadPuertas = pCantidadPuertas;
+        }
+
+        public Auto(string pPatente, int pDniDueño) : this()
+        {
+            this.patente = pPatente;
+            this.dniDueño = pDniDueño;
+        }
+
+        private Auto()
+        {
+            this.marca = "Dato no ingresado";
+            this.cantidadPuertas = -1;
+        }
+        #endregion
+
+        #region Métodos
+        public string GetInformacion()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine("Patente: " + this.patente);
+            sb.AppendLine("Marca: " + this.marca);
+            sb.AppendLine("Cantidad de puertas: " + this.cantidadPuertas);
+            sb.AppendLine("Dni del dueño: " + this.dniDueño);
+
+            return sb.ToString();
+        }
+
+        public void SetInformacion(int pCantidadPuertas)
+        {
+            this.cantidadPuertas = pCantidadPuertas;
+        }
+
+        public void SetInformacion(string pMarca)
+        {
+            this.marca = pMarca;
+        }
+
+        public void SetInformacion(string pMarca,int pCantidadPuertas)
+        {
+            this.SetInformacion(pMarca);
+            this.SetInformacion(pCantidadPuertas);
+        }
+
+        #endregion
+
+        #region Operaciones
+        public static bool operator ==(Auto autoA, Auto autoB)
+        { 
+            return autoA.patente == autoB.patente;
+        }
+
+        public static bool operator !=(Auto autoA, Auto autoB)
+        {
+            return !(autoA == autoB);
+        }
+        #endregion
+
+        public static explicit operator string(Auto autito)
+        {
+            return autito.GetInformacion();
+        }
+
+        
+
+    }
+}
