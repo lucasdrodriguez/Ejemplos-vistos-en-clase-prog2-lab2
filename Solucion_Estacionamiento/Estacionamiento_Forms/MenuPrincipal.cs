@@ -75,6 +75,9 @@ namespace Estacionamiento_Forms
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
             this.CargarTabla();
+            lb_nombreEstacionamiento.Text = "Nombre del estacionamiento : "+ instanciaEstacionamiento.RetornarNombre() ;
+            lb_capacidad.Text =  "Capacidad : "+ instanciaEstacionamiento.tieneCapacidadLibre() + " lugares libres de " + instanciaEstacionamiento.RetornarCapacidad();
+            lb_precioPorDia.Text ="Precio por dia :" + instanciaEstacionamiento.RetornarPrecio().ToString() ;
 
         }
 
