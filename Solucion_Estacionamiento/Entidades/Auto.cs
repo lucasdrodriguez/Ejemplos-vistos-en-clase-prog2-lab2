@@ -74,12 +74,7 @@ namespace Entidades
             this.marca = pMarca;
         }
 
-        public void SetInformacion(string pMarca, int pCantidadPuertas)
-        {
-            this.SetInformacion(pMarca);
-            this.SetInformacion(pCantidadPuertas);
-        }
-
+     
         #endregion
 
         #region Operaciones
@@ -93,11 +88,6 @@ namespace Entidades
             return !(autoA == autoB);
         }
         #endregion
-
-        public static explicit operator string(Auto autito)
-        {
-            return autito.GetInformacion();
-        }
 
         public static Auto CrearAuto(string patente, string marca, int cantidadPuertas, int dniDueño)
         {
