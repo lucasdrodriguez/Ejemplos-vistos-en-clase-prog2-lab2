@@ -1,0 +1,20 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Estacionamiento_Forms.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="HiddenMessage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Este programa lo hice:
+* Un domingo a la tarde en cuarentena
+* Tomando té de vainilla (se los super recomiendo)
+* Escuchando una lista de Queen en spotify (se me pegó la version de  Tie Your Mother Down  del Live Rock Montreal de YouTube).
+
+Aun así, no esperen mucho de este programita!
+Funciona,pero se puede mejorar mucho. Estaria bueno que lo mejores con el correr de las clases.
+
+Os vereis.</Value>
+    </Setting>
+    <Setting Name="HiddenMessage2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Este programirijillo mocho que hice,que no esta tannn mal... :P</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repaso_Estacionamiento", "R
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{AD026C91-AC10-40B0-AE6B-FC7876BD64AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Estacionamiento_Forms", "Estacionamiento_Forms\Estacionamiento_Forms.csproj", "{7D969791-13C3-4ED9-8C8A-D89D61C5E6E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{AD026C91-AC10-40B0-AE6B-FC7876BD64AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD026C91-AC10-40B0-AE6B-FC7876BD64AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD026C91-AC10-40B0-AE6B-FC7876BD64AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D969791-13C3-4ED9-8C8A-D89D61C5E6E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D969791-13C3-4ED9-8C8A-D89D61C5E6E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D969791-13C3-4ED9-8C8A-D89D61C5E6E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D969791-13C3-4ED9-8C8A-D89D61C5E6E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

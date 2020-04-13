@@ -4,3 +4,8 @@ C:\Users\YAGO\Desktop\Solucion_Estacionamiento\Entidades\obj\Debug\Entidades.csp
 C:\Users\YAGO\Desktop\Solucion_Estacionamiento\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\YAGO\Desktop\Solucion_Estacionamiento\Entidades\obj\Debug\Entidades.dll
 C:\Users\YAGO\Desktop\Solucion_Estacionamiento\Entidades\obj\Debug\Entidades.pdb
+C:\Users\IsmashiSan\Documents\ProgLab 2020\Ejemplos-de-clase-prog2-lab2\Solucion_Estacionamiento\Entidades\bin\Debug\Entidades.dll
+C:\Users\IsmashiSan\Documents\ProgLab 2020\Ejemplos-de-clase-prog2-lab2\Solucion_Estacionamiento\Entidades\bin\Debug\Entidades.pdb
+C:\Users\IsmashiSan\Documents\ProgLab 2020\Ejemplos-de-clase-prog2-lab2\Solucion_Estacionamiento\Entidades\obj\Debug\Entidades.dll
+C:\Users\IsmashiSan\Documents\ProgLab 2020\Ejemplos-de-clase-prog2-lab2\Solucion_Estacionamiento\Entidades\obj\Debug\Entidades.pdb
+C:\Users\IsmashiSan\Documents\ProgLab 2020\Ejemplos-de-clase-prog2-lab2\Solucion_Estacionamiento\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache

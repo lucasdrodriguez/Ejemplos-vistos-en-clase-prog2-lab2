@@ -46,6 +46,23 @@ namespace Entidades
 
             return sb.ToString();
         }
+        public string GetPatente()
+        {
+            return this.patente;
+        }
+        public string GetMarca()
+        {
+            return this.marca;
+        }
+        public int GetCantidadPuertas()
+        {
+            return this.cantidadPuertas;
+        }
+        public int GetDniDueño()
+        {
+            return this.dniDueño;
+        }
+
 
         public void SetInformacion(int pCantidadPuertas)
         {
@@ -57,7 +74,7 @@ namespace Entidades
             this.marca = pMarca;
         }
 
-        public void SetInformacion(string pMarca,int pCantidadPuertas)
+        public void SetInformacion(string pMarca, int pCantidadPuertas)
         {
             this.SetInformacion(pMarca);
             this.SetInformacion(pCantidadPuertas);
@@ -67,7 +84,7 @@ namespace Entidades
 
         #region Operaciones
         public static bool operator ==(Auto autoA, Auto autoB)
-        { 
+        {
             return autoA.patente == autoB.patente;
         }
 
@@ -82,7 +99,10 @@ namespace Entidades
             return autito.GetInformacion();
         }
 
-        
+        public static Auto CrearAuto(string patente, string marca, int cantidadPuertas, int dniDueño)
+        {
+            return new Auto(patente, marca, cantidadPuertas, dniDueño);
+        }
 
     }
 }

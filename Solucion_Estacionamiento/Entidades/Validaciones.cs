@@ -10,7 +10,7 @@ namespace Entidades
     {
 
 
-        public static string ValidarCargaString(string s, string mensajeError)
+        public static string ValidarCargaStringConsola(string s, string mensajeError)
         {
             while (s == string.Empty)
             {
@@ -22,7 +22,7 @@ namespace Entidades
             }
             return s;
         }
-        public static int ValidarCargaEntero(string s, string mensajeError, int max, int min)
+        public static int ValidarCargaEnteroConsola(string s, string mensajeError, int max, int min)
         {
             int numeroARetornar = 0;
             while (!(int.TryParse(s, out numeroARetornar)) || numeroARetornar < min || numeroARetornar > max)
@@ -35,7 +35,7 @@ namespace Entidades
 
             return numeroARetornar;
         }
-        public static double ValidarCargaDouble(string s, string mensajeError, double max, double min)
+        public static double ValidarCargaDoubleConsola(string s, string mensajeError, double max, double min)
         {
             double numeroARetornar = 0;
             while (!(double.TryParse(s, out numeroARetornar)) || numeroARetornar < min || numeroARetornar > max)
@@ -70,5 +70,21 @@ namespace Entidades
                 return true;
             return false;
         }
+
+
+        public static bool ValidarCargaDoubleForms(string s, double max, double min)
+        {
+
+            return (double.TryParse(s, out double numeroARetornar) && numeroARetornar > min && numeroARetornar < max);
+        }
+        public static bool ValidarCargaEnteroForms(string s, int max, int min)
+        {
+            return (int.TryParse(s, out int numeroARetornar) && numeroARetornar > min && numeroARetornar < max);
+        }
+        public static bool ValidarCargaStringForms(string s)
+        {
+            return !(string.IsNullOrEmpty(s));
+        }
+
     }
 }

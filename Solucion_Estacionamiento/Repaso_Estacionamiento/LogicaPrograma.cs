@@ -36,15 +36,15 @@ namespace Repaso_Estacionamiento
             double precio = 0;
 
             Menues.MostrarCabecera("**Alta inicial Estacionamiento **", '*');
-
+     
             Console.WriteLine("\nIngresar nombre estacionamiento");
-            nombre = Validaciones.ValidarCargaString(Console.ReadLine(), "Error,reingrese un nombre valido para su estacionamiento");
+            nombre = Validaciones.ValidarCargaStringConsola(Console.ReadLine(), "Error,reingrese un nombre valido para su estacionamiento");
 
             Console.WriteLine("\ningresar capacidad del estacionamiento");
-            capacidad = Validaciones.ValidarCargaEntero(Console.ReadLine(), "Error,capacidad no valida.Maximo 100 ", int.MaxValue, 1);
+            capacidad = Validaciones.ValidarCargaEnteroConsola(Console.ReadLine(), "Error,capacidad no valida.Maximo 100 ", int.MaxValue, 1);
 
             Console.WriteLine("\ningresar precio en pesos por dia del estacionamiento");
-            precio = Validaciones.ValidarCargaDouble(Console.ReadLine(), "Error,numero no valido.Debe ser mayor a 1 peso",double.MaxValue,1);
+            precio = Validaciones.ValidarCargaDoubleConsola(Console.ReadLine(), "Error,numero no valido.Debe ser mayor a 1 peso",double.MaxValue,1);
 
             return new Estacionamiento(nombre, capacidad, precio);
 
@@ -111,11 +111,8 @@ namespace Repaso_Estacionamiento
         private static bool Salir(string mensaje)
         {
 
-            if (Validaciones.ValidarSioNo(mensaje))
-            {
-                return true;
-            }
-            return false;
+            return Validaciones.ValidarSioNo(mensaje);
+      
         }
 
         private static Auto CrearAuto()
@@ -126,19 +123,19 @@ namespace Repaso_Estacionamiento
             int dniDueño = 0;
 
             Console.WriteLine("Ingresar patente auto");
-            patente = Validaciones.ValidarCargaString(Console.ReadLine(), "Error,reingrese un nombre valido para la patente");
+            patente = Validaciones.ValidarCargaStringConsola(Console.ReadLine(), "Error,reingrese un nombre valido para la patente");
 
             Console.WriteLine("ingresar DNI dueño ");
-            dniDueño = Validaciones.ValidarCargaEntero(Console.ReadLine(), "Error,dni no valido. Debe estar entre 999.999.999 y 1.000.000 ", 999999999, 1000000);
+            dniDueño = Validaciones.ValidarCargaEnteroConsola(Console.ReadLine(), "Error,dni no valido. Debe estar entre   1.000.000 Y 999.999.999 ", 999999999, 1000000);
 
             if (LogicaPrograma.Salir("\n\n ¿Desea ingresar marca y cantidad de puertas?"))
             {
                 Console.WriteLine("\nIngresar marca auto");
-                marca = Validaciones.ValidarCargaString(Console.ReadLine(), "Error,reingrese un nombre valido para la marca");
+                marca = Validaciones.ValidarCargaStringConsola(Console.ReadLine(), "Error,reingrese un nombre valido para la marca");
 
                 Console.WriteLine("ingresar cantidad de puertas del estacionamiento");
-                cantidadPuertas = Validaciones.ValidarCargaEntero(Console.ReadLine(), "Error,cantidad de puertas no valida", 5, 2);
-
+                cantidadPuertas = Validaciones.ValidarCargaEnteroConsola(Console.ReadLine(), "Error,cantidad de puertas no valida", 5, 2);
+               
                 return new Auto(patente, marca, cantidadPuertas, dniDueño);
             }
 
@@ -149,7 +146,7 @@ namespace Repaso_Estacionamiento
         {
             if (instanciaEstacionamiento.tieneCapacidadLibre() > 0)
             {
-                if (instanciaEstacionamiento + LogicaPrograma.CrearAuto())
+                if (instanciaEstacionamiento + LogicaPrograma.CrearAuto()) // instanciaEsta + unAuto
                 {
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Green;

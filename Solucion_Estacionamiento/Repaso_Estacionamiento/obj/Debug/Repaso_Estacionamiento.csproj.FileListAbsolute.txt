@@ -8,3 +8,4 @@ C:\Users\YAGO\Desktop\Solucion_Estacionamiento\Repaso_Estacionamiento\obj\Debug\
 C:\Users\YAGO\Desktop\Solucion_Estacionamiento\Repaso_Estacionamiento\obj\Debug\Repaso_Estacionamiento.csproj.CopyComplete
 C:\Users\YAGO\Desktop\Solucion_Estacionamiento\Repaso_Estacionamiento\obj\Debug\Repaso_Estacionamiento.exe
 C:\Users\YAGO\Desktop\Solucion_Estacionamiento\Repaso_Estacionamiento\obj\Debug\Repaso_Estacionamiento.pdb
+C:\Users\IsmashiSan\Documents\ProgLab 2020\Ejemplos-de-clase-prog2-lab2\Solucion_Estacionamiento\Repaso_Estacionamiento\obj\Debug\Repaso_Estacionamiento.csprojAssemblyReference.cache

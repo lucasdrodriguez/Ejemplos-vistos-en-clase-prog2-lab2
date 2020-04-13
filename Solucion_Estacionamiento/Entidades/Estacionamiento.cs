@@ -24,6 +24,29 @@ namespace Entidades
         {
             return this.nombreEstacionamiento;
         }
+        public Auto[] RetornarArrayAutos()
+        {
+            return this.arrayDeAuto; 
+        }
+        public int RetornarCapacidad()
+        {
+            return this.arrayDeAuto.Length;
+        }
+        public double RetornarPrecio()
+        {
+            return this.precioXAuto;
+        }
+
+        public void SetearNombre(string n)
+        {
+           this.nombreEstacionamiento = n;
+        }
+       
+        public void SetearPrecio(double p)
+        {
+           this.precioXAuto =p;
+        }
+
 
         public int tieneCapacidadLibre()
         {
@@ -47,6 +70,7 @@ namespace Entidades
             sb.AppendLine($"Capacidad estacionamineto: {this.tieneCapacidadLibre()} lugares libres de {this.arrayDeAuto.Length}");
             sb.AppendLine($"Precio por auto: {this.precioXAuto}");
             sb.Append($"\nInformacion de los autos:");
+
             if (!(this.tieneCapacidadLibre()==this.arrayDeAuto.Length))
             {
                 foreach (Auto item in this.arrayDeAuto)
