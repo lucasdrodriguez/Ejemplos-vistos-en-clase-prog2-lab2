@@ -1,0 +1,6 @@
+C:\Users\IsmashiSan\Desktop\PreguntaSiHay\bin\Debug\PreguntaSiHay.exe.config
+C:\Users\IsmashiSan\Desktop\PreguntaSiHay\bin\Debug\PreguntaSiHay.exe
+C:\Users\IsmashiSan\Desktop\PreguntaSiHay\bin\Debug\PreguntaSiHay.pdb
+C:\Users\IsmashiSan\Desktop\PreguntaSiHay\obj\Debug\PreguntaSiHay.csprojAssemblyReference.cache
+C:\Users\IsmashiSan\Desktop\PreguntaSiHay\obj\Debug\PreguntaSiHay.exe
+C:\Users\IsmashiSan\Desktop\PreguntaSiHay\obj\Debug\PreguntaSiHay.pdb
